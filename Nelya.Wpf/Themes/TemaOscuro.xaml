@@ -1,0 +1,70 @@
+﻿<!--  ======================================================================================= -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles -->
+<!--  ======================================================================================= -->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!--  BUTTON  -->
+    <SolidColorBrush x:Key="ButtonForegraound" Color="LightGray" />
+    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="ButtonIconBrush" Color="LightGray" />
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Gainsboro" />
+    <SolidColorBrush x:Key="ButtonDisbaledBrush" Color="Gray" />
+
+
+    <!--  DATA GRID EXT  -->
+    <SolidColorBrush x:Key="DataGridExtForegraound" Color="LightGray" />
+    <SolidColorBrush x:Key="DataGridHeaderForeground" Color="MidnightBlue" />
+    <SolidColorBrush x:Key="DataGridHeaderBackground" Color="Gainsboro" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrush" Color="#252525" />
+    <SolidColorBrush x:Key="DataGridHeaderSortArrowBrush" Color="Silver" />
+    <SolidColorBrush x:Key="DataGridHeaderDisabledBackground" Color="#353535" />
+    <SolidColorBrush x:Key="DataGridHeaderOnMouseBackground" Color="DimGray" />
+    <SolidColorBrush x:Key="DataGridHeaderOnPressBackground" Color="Tan" />
+    <SolidColorBrush x:Key="DataGridRowBackground" Color="#292929" />
+    <SolidColorBrush x:Key="DataGridRowAltBackground" Color="#404040" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrush" Color="Silver" />
+    <SolidColorBrush x:Key="DataGridCellActiveBackground" Color="#18399a" />
+    <SolidColorBrush x:Key="DataGridCellSelectedBackground" Color="CornflowerBlue" />
+    <SolidColorBrush x:Key="DataGridCellForeground" Color="White" />
+    <SolidColorBrush x:Key="DataGridVerticalGridBrush" Color="DimGray" />
+    <SolidColorBrush x:Key="DataGridGroupBackground" Color="#054d7a" />
+    <SolidColorBrush x:Key="DataGridGroupForeground" Color="LightGray" />
+    <SolidColorBrush x:Key="DataGridGroupBorder" Color="Lavender" />
+
+
+    <!--  TEXTBOX EXT  -->
+    <SolidColorBrush x:Key="TextBoxExtBackground" Color="#252525" />
+    <SolidColorBrush x:Key="TextBoxExtForeground" Color="LightGray" />
+    <SolidColorBrush x:Key="TextBoxExtBorderBrush" Color="Silver" />
+    <SolidColorBrush x:Key="TextBoxExtFocusBackground" Color="#404040" />
+
+
+    <!--  COMOBOX EXT  -->
+    <SolidColorBrush x:Key="ComboBoxExtBackground" Color="#252525" />
+    <SolidColorBrush x:Key="ComboBoxExtForeground" Color="LightGray" />
+    <SolidColorBrush x:Key="ComboBoxExtBorderBrush" Color="Silver" />
+    <SolidColorBrush x:Key="ComboBoxExtFocusBackground" Color="#404040" />
+    <SolidColorBrush x:Key="ComboBoxExtFocusBorder" Color="SandyBrown" />
+    <SolidColorBrush x:Key="ComboBoxExtDisabledBrush" Color="Gray" />
+
+
+    <!--  HEADER GROUP  -->
+    <SolidColorBrush x:Key="HeaderGroupBorderBrush" Color="Lavender" />
+    <SolidColorBrush x:Key="HeaderGroupHeaderForeground" Color="LightGray" />
+    <SolidColorBrush x:Key="HeaderGroupHeaderBackground" Color="#054d7a" />
+    <SolidColorBrush x:Key="HeaderGroupBackground" Color="Transparent" />
+
+
+    <!--  TILE BUTTON  -->
+    <SolidColorBrush x:Key="TileButtonForegraound" Color="LightGray" />
+    <SolidColorBrush x:Key="TileButtonBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="TileButtonBorderBrush" Color="Gray" />
+    <SolidColorBrush x:Key="TileButtonDisbaledBrush" Color="Gray" />
+
+
+
+
+</ResourceDictionary>

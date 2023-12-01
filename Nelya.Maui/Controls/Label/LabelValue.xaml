@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--  =======================================================================================  -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles  -->
+<!--  =======================================================================================  -->
+<ContentView
+    x:Class="Nelya.Maui.Controls.Label.LabelValue"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Name="labelValue">
+
+    <Grid
+        BindingContext="{x:Reference labelValue}"
+        ColumnDefinitions="*,Auto">
+
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer
+                Command="{Binding Command}"
+                CommandParameter="{Binding CommandParameter}" />
+        </Grid.GestureRecognizers>
+
+        <Label
+            Padding="0,10"
+            FontSize="Small"
+            Text="{Binding Text}"
+            TextColor="{StaticResource Gray900}"
+            VerticalOptions="Center" />
+        <Label
+            Grid.Column="1"
+            Padding="0,10"
+            FontSize="Small"
+            HorizontalOptions="End"
+            HorizontalTextAlignment="End"
+            Text="{Binding Value}"
+            TextColor="{StaticResource Gray600}"
+            VerticalOptions="Center" />
+        <BoxView
+            Grid.ColumnSpan="2"
+            BackgroundColor="LightGray"
+            HeightRequest="1"
+            IsVisible="{Binding ShowSeparator}"
+            VerticalOptions="EndAndExpand" />
+
+    </Grid>
+
+</ContentView>

@@ -1,0 +1,179 @@
+﻿<!--  =======================================================================================  -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles  -->
+<!--  =======================================================================================  -->
+<UserControl
+    x:Class="Nelya.Wpf.Controls.Text.DateSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:buttons="clr-namespace:Nelya.Wpf.Controls.Buttons"
+    xmlns:cnv="clr-namespace:Nelya.Wpf.Converters"
+    xmlns:local="clr-namespace:Nelya.Wpf.Controls.Text"
+    xmlns:text="clr-namespace:Nelya.Wpf.Controls.Text">
+
+    <UserControl.Resources>
+        <cnv:MonthNameConverter x:Key="monthNameConverter" />
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--  DIA  -->
+        <Border
+            Grid.Row="0"
+            Margin="0,0,0,4"
+            Padding="0"
+            Background="{StaticResource TextBoxExtBackground}"
+            BorderBrush="{StaticResource TextBoxExtBorderBrush}"
+            BorderThickness="1"
+            CornerRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=CornerRadius}"
+            Visibility="{Binding RelativeSource={RelativeSource AncestorType=local:DateSelector}, Path=DayVisibility}">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <buttons:ButtonExtH
+                    Title="&#xEA38;"
+                    Grid.Column="0"
+                    Margin="0"
+                    Padding="8,4"
+                    BorderThickness="0"
+                    Click="BtDiaAnterior_Click"
+                    FontFamily="{StaticResource icoMoon}"
+                    FontSize="16" />
+                <text:TextBoxExt
+                    Grid.Column="1"
+                    Width="100"
+                    Margin="8,0"
+                    HorizontalContentAlignment="Center"
+                    BorderThickness="0"
+                    Focusable="False"
+                    IsReadOnly="True"
+                    Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=Fecha.Day, Mode=OneWay}" />
+                <buttons:ButtonExtH
+                    Title="&#xEA34;"
+                    Grid.Column="2"
+                    Margin="0"
+                    Padding="8,4"
+                    BorderThickness="0"
+                    Click="BtDiaSiguiente_Click"
+                    CornerRadius="4"
+                    FontFamily="{StaticResource icoMoon}"
+                    FontSize="16" />
+            </Grid>
+        </Border>
+
+
+        <!--  MES  -->
+        <Border
+            Grid.Row="1"
+            Margin="0,0,0,4"
+            Padding="0"
+            Background="{StaticResource TextBoxExtBackground}"
+            BorderBrush="{StaticResource TextBoxExtBorderBrush}"
+            BorderThickness="1"
+            CornerRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=CornerRadius}">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <buttons:ButtonExtH
+                    Title="&#xEA38;"
+                    Grid.Column="0"
+                    Margin="0"
+                    Padding="8,4"
+                    BorderThickness="0"
+                    Click="BtMesAnterior_Click"
+                    CornerRadius="4"
+                    FontFamily="{StaticResource icoMoon}"
+                    FontSize="16" />
+                <text:TextBoxExt
+                    Grid.Column="1"
+                    Width="100"
+                    Margin="8,0"
+                    HorizontalContentAlignment="Center"
+                    BorderThickness="0"
+                    Focusable="False"
+                    IsReadOnly="True"
+                    Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=Fecha.Month, Mode=OneWay, Converter={StaticResource monthNameConverter}}" />
+                <buttons:ButtonExtH
+                    Title="&#xEA34;"
+                    Grid.Column="2"
+                    Margin="0"
+                    Padding="8,4"
+                    BorderThickness="0"
+                    Click="BtMesSiguiente_Click"
+                    CornerRadius="4"
+                    FontFamily="{StaticResource icoMoon}"
+                    FontSize="16" />
+            </Grid>
+        </Border>
+
+
+        <!--  AÑO  -->
+        <Border
+            Grid.Row="2"
+            Margin="0,0,0,4"
+            Padding="0"
+            Background="{StaticResource TextBoxExtBackground}"
+            BorderBrush="{StaticResource TextBoxExtBorderBrush}"
+            BorderThickness="1"
+            CornerRadius="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=CornerRadius}">
+
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <buttons:ButtonExtH
+                    Title="&#xEA38;"
+                    Grid.Column="0"
+                    Margin="0"
+                    Padding="8,4"
+                    BorderThickness="0"
+                    Click="BtAñoAnterior_Click"
+                    CornerRadius="4"
+                    FontFamily="{StaticResource icoMoon}"
+                    FontSize="16" />
+                <text:TextBoxExt
+                    Grid.Column="1"
+                    Width="100"
+                    Margin="8,0"
+                    HorizontalContentAlignment="Center"
+                    BorderThickness="0"
+                    Focusable="False"
+                    IsReadOnly="True"
+                    Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}, Path=Fecha.Year, Mode=OneWay}" />
+                <buttons:ButtonExtH
+                    Title="&#xEA34;"
+                    Grid.Column="2"
+                    Margin="0"
+                    Padding="8,4"
+                    BorderThickness="0"
+                    Click="BtAñoSiguiente_Click"
+                    CornerRadius="4"
+                    FontFamily="{StaticResource icoMoon}"
+                    FontSize="16" />
+            </Grid>
+        </Border>
+
+
+    </Grid>
+
+
+</UserControl>

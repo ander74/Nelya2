@@ -1,0 +1,93 @@
+﻿<!--  =======================================================================================  -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles  -->
+<!--  =======================================================================================  -->
+<Button
+    x:Class="Nelya.Wpf.Controls.Buttons.ButtonExtH"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Nelya.Wpf.Controls.Buttons">
+
+
+    <Button.Style>
+
+        <Style TargetType="{x:Type local:ButtonExtH}">
+            <Setter Property="Background" Value="{StaticResource ButtonBackground}" />
+            <Setter Property="Margin" Value="2,5" />
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="Foreground" Value="{StaticResource ButtonForegraound}" />
+            <Setter Property="IconFontColor" Value="{StaticResource ButtonForegraound}" />
+            <Setter Property="IconFontSize" Value="12" />
+            <Setter Property="Padding" Value="10,6" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type local:ButtonExtH}">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=CornerRadius}">
+                            <ContentPresenter
+                                x:Name="contentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}">
+                                <ContentPresenter.Content>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock
+                                            Margin="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=IconFontMargin}"
+                                            VerticalAlignment="Center"
+                                            FontFamily="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=IconFontFamily}"
+                                            FontSize="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=IconFontSize}"
+                                            Foreground="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=IconFontColor}"
+                                            Text="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=IconFontText}"
+                                            TextAlignment="Center"
+                                            TextWrapping="Wrap"
+                                            Visibility="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=IconFontTextVisibility}" />
+                                        <TextBlock
+                                            Margin="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=IconTextMargin}"
+                                            VerticalAlignment="Center"
+                                            Text="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=Title}"
+                                            TextAlignment="Center"
+                                            TextWrapping="Wrap"
+                                            Visibility="{Binding RelativeSource={RelativeSource AncestorType=local:ButtonExtH}, Path=TitleVisibility}" />
+                                    </StackPanel>
+                                </ContentPresenter.Content>
+                            </ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=OnMouseBrush}" />
+                    <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=OnMouseBrush}" />
+                    <Setter Property="IconFontColor" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=OnMouseBrush}" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=OnPressBrush}" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="BorderBrush" Value="{StaticResource ButtonDisbaledBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource ButtonDisbaledBrush}" />
+                    <Setter Property="IconFontColor" Value="{StaticResource ButtonDisbaledBrush}" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+
+
+    </Button.Style>
+
+
+
+
+</Button>

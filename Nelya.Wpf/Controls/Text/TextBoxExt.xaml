@@ -1,0 +1,9 @@
+﻿<!--  =======================================================================================  -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles  -->
+<!--  =======================================================================================  -->
+<TextBox
+    x:Class="Nelya.Wpf.Controls.Text.TextBoxExt"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Nelya.Wpf.Controls"
+    Style="{StaticResource styTextBoxExt}" />

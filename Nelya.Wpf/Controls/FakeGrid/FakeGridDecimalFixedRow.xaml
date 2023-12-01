@@ -1,0 +1,42 @@
+﻿<!--  =======================================================================================  -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles  -->
+<!--  =======================================================================================  -->
+<Grid
+    x:Class="Nelya.Wpf.Controls.FakeGrid.FakeGridDecimalFixedRow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Nelya.Wpf.Controls.FakeGrid"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    Style="{StaticResource styFakeGridDecimalFixedRow}"
+    mc:Ignorable="d">
+
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGrid}, Path=DefinitionWidth}" />
+        <ColumnDefinition Width="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGrid}, Path=ValueWidth}" />
+    </Grid.ColumnDefinitions>
+
+    <TextBlock
+        Grid.Column="0"
+        Padding="4"
+        FontSize="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=FontSize}"
+        FontWeight="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=DefinitionWeight}"
+        Foreground="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=Foreground}"
+        Text="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=Definition}"
+        TextAlignment="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=DefinitionAlignment}" />
+
+    <TextBlock
+        Grid.Column="1"
+        Padding="4"
+        FontSize="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=FontSize}"
+        FontWeight="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=ValueWeight}"
+        Foreground="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=Foreground}"
+        Text="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=Valor}"
+        TextAlignment="{Binding RelativeSource={RelativeSource AncestorType=local:FakeGridDecimalFixedRow}, Path=ValueAlignment}" />
+
+
+
+</Grid>

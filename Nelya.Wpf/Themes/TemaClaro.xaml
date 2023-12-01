@@ -1,0 +1,77 @@
+﻿<!--  ======================================================================================= -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles -->
+<!--  ======================================================================================= -->
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <!--  BUTTON  -->
+    <SolidColorBrush x:Key="ButtonForegraound" Color="DimGray" />
+    <SolidColorBrush x:Key="ButtonBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="ButtonIconBrush" Color="DimGray" />
+    <SolidColorBrush x:Key="ButtonBorderBrush" Color="Gray" />
+    <SolidColorBrush x:Key="ButtonDisbaledBrush" Color="Silver" />
+
+
+    <!--  DATAGRID EXT  -->
+    <SolidColorBrush x:Key="DataGridExtForegraound" Color="Black" />
+    <SolidColorBrush x:Key="DataGridHeaderForeground" Color="Black" />
+    <SolidColorBrush x:Key="DataGridHeaderBackground" Color="Gainsboro" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrush" Color="Silver" />
+    <SolidColorBrush x:Key="DataGridHeaderSortArrowBrush" Color="Gray" />
+    <SolidColorBrush x:Key="DataGridHeaderDisabledBackground" Color="LightGray" />
+    <SolidColorBrush x:Key="DataGridHeaderOnMouseBackground" Color="DarkGray" />
+    <SolidColorBrush x:Key="DataGridHeaderOnPressBackground" Color="LightSlateGray" />
+    <SolidColorBrush x:Key="DataGridRowBackground" Color="White" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrush" Color="Gray" />
+    <SolidColorBrush x:Key="DataGridRowAltBackground" Color="WhiteSmoke" />
+    <SolidColorBrush x:Key="DataGridCellActiveBackground" Color="DodgerBlue" />
+    <SolidColorBrush x:Key="DataGridCellSelectedBackground" Color="PapayaWhip" />
+    <SolidColorBrush x:Key="DataGridCellForeground" Color="Black" />
+    <SolidColorBrush x:Key="DataGridVerticalGridBrush" Color="Lavender" />
+    <SolidColorBrush x:Key="DataGridGroupBackground" Color="LightSkyBlue" />
+    <SolidColorBrush x:Key="DataGridGroupForeground" Color="MidnightBlue" />
+    <SolidColorBrush x:Key="DataGridGroupBorder" Color="Lavender" />
+
+
+    <!--  TEXTBOX EXT  -->
+    <SolidColorBrush x:Key="TextBoxExtBackground" Color="White" />
+    <SolidColorBrush x:Key="TextBoxExtForeground" Color="MidnightBlue" />
+    <SolidColorBrush x:Key="TextBoxExtBorderBrush" Color="Gray" />
+    <SolidColorBrush x:Key="TextBoxExtFocusBackground" Color="Honeydew" />
+
+
+    <!--  COMBOBOX EXT  -->
+    <SolidColorBrush x:Key="ComboBoxExtBackground" Color="White" />
+    <SolidColorBrush x:Key="ComboBoxExtForeground" Color="MidnightBlue" />
+    <SolidColorBrush x:Key="ComboBoxExtBorderBrush" Color="Gray" />
+    <SolidColorBrush x:Key="ComboBoxExtFocusBackground" Color="Honeydew" />
+    <SolidColorBrush x:Key="ComboBoxExtFocusBorder" Color="Peru" />
+    <SolidColorBrush x:Key="ComboBoxExtDisabledBrush" Color="Silver" />
+
+
+    <!--  HEADER GROUP  -->
+    <SolidColorBrush x:Key="HeaderGroupBorderBrush" Color="Lavender" />
+    <SolidColorBrush x:Key="HeaderGroupHeaderForeground" Color="Black" />
+    <SolidColorBrush x:Key="HeaderGroupHeaderBackground" Color="LightSkyBlue" />
+    <SolidColorBrush x:Key="HeaderGroupBackground" Color="Transparent" />
+
+
+    <!--  TILE BUTTON  -->
+    <SolidColorBrush x:Key="TileButtonForegraound" Color="DimGray" />
+    <SolidColorBrush x:Key="TileButtonBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="TileButtonBorderBrush" Color="LightGray" />
+    <SolidColorBrush x:Key="TileButtonDisbaledBrush" Color="Silver" />
+
+
+    <!--  TAB ITEM  -->
+    <SolidColorBrush x:Key="TabItemForegraound" Color="DimGray" />
+    <SolidColorBrush x:Key="TabItemBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="TabItemSelectedBackground" Color="LightSkyBlue" />
+    <SolidColorBrush x:Key="TabItemBorderBrush" Color="LightGray" />
+    <SolidColorBrush x:Key="TabItemOnMouseBackground" Color="Gainsboro" />
+
+
+
+</ResourceDictionary>

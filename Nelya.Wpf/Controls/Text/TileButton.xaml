@@ -1,0 +1,87 @@
+﻿<!--  =======================================================================================  -->
+<!--  Copyright 2024 - Nelya 2.0 - A. Herrero - Vea el archivo Licencia.txt para mas detalles  -->
+<!--  =======================================================================================  -->
+<Button
+    x:Class="Nelya.Wpf.Controls.Text.TileButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Nelya.Wpf.Controls.Text">
+
+
+    <Button.Style>
+
+        <Style TargetType="local:TileButton">
+            <Setter Property="Background" Value="{StaticResource TileButtonBackground}" />
+            <Setter Property="Margin" Value="20" />
+            <Setter Property="FontFamily" Value="Tahoma" />
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="Foreground" Value="{StaticResource TileButtonForegraound}" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="AnchoImagen" Value="200" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="BorderBrush" Value="{StaticResource TileButtonBorderBrush}" />
+            <Setter Property="BorderThickness" Value="3" />
+            <Setter Property="ImageOpacity" Value="0.9" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="local:TileButton">
+                        <Grid>
+                            <ContentPresenter
+                                x:Name="contentPresenter"
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}">
+                                <ContentPresenter.Content>
+                                    <Grid>
+                                        <Border
+                                            Background="{TemplateBinding Background}"
+                                            BorderBrush="{TemplateBinding BorderBrush}"
+                                            BorderThickness="{TemplateBinding BorderThickness}"
+                                            CornerRadius="{Binding RelativeSource={RelativeSource AncestorType=local:TileButton}, Path=CornerRadius}">
+                                            <StackPanel Orientation="Vertical">
+                                                <Image
+                                                    Width="{Binding RelativeSource={RelativeSource AncestorType=local:TileButton}, Path=AnchoImagen}"
+                                                    Height="{Binding RelativeSource={RelativeSource AncestorType=local:TileButton}, Path=AltoImagen}"
+                                                    Opacity="{Binding RelativeSource={RelativeSource AncestorType=local:TileButton}, Path=ImageOpacity}"
+                                                    Source="{Binding RelativeSource={RelativeSource AncestorType=local:TileButton}, Path=UrlSource}"
+                                                    Stretch="Fill" />
+                                                <TextBlock
+                                                    Padding="0,10"
+                                                    Text="{Binding RelativeSource={RelativeSource AncestorType=local:TileButton}, Path=Title}"
+                                                    TextAlignment="Center"
+                                                    TextWrapping="Wrap" />
+                                            </StackPanel>
+                                        </Border>
+                                    </Grid>
+                                </ContentPresenter.Content>
+                            </ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=OnMouseBrush}" />
+                    <Setter Property="Foreground" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=OnMouseBrush}" />
+                    <Setter Property="ImageOpacity" Value="1" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{Binding RelativeSource={RelativeSource Mode=Self}, Path=OnPressBrush}" />
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="BorderBrush" Value="{StaticResource TileButtonDisbaledBrush}" />
+                    <Setter Property="Foreground" Value="{StaticResource TileButtonDisbaledBrush}" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+    </Button.Style>
+
+
+
+
+</Button>

@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nelya.Core", "Nelya.Core\Nelya.Core.csproj", "{AB08543A-D912-4611-B345-7DADD50A3132}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nelya.ChartJs", "Nelya.ChartJs\Nelya.ChartJs.csproj", "{03DE54B4-C7D0-4DA5-9DCA-FB1BC44C5B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nelya.Pdf.PdfDataSet", "Nelya.Pdf.PdfDataSet\Nelya.Pdf.PdfDataSet.csproj", "{BDC86BE4-67ED-4489-B530-A2D9D5A0FC12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nelya.Wpf", "Nelya.Wpf\Nelya.Wpf.csproj", "{1C60A512-B5ED-4F2F-AF80-B40E7F6A6FFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nelya.Maui", "Nelya.Maui\Nelya.Maui.csproj", "{8B3DB018-C5AA-4D63-B9A6-F30846215059}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB08543A-D912-4611-B345-7DADD50A3132}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB08543A-D912-4611-B345-7DADD50A3132}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB08543A-D912-4611-B345-7DADD50A3132}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB08543A-D912-4611-B345-7DADD50A3132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03DE54B4-C7D0-4DA5-9DCA-FB1BC44C5B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03DE54B4-C7D0-4DA5-9DCA-FB1BC44C5B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03DE54B4-C7D0-4DA5-9DCA-FB1BC44C5B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03DE54B4-C7D0-4DA5-9DCA-FB1BC44C5B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC86BE4-67ED-4489-B530-A2D9D5A0FC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC86BE4-67ED-4489-B530-A2D9D5A0FC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC86BE4-67ED-4489-B530-A2D9D5A0FC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC86BE4-67ED-4489-B530-A2D9D5A0FC12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C60A512-B5ED-4F2F-AF80-B40E7F6A6FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C60A512-B5ED-4F2F-AF80-B40E7F6A6FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C60A512-B5ED-4F2F-AF80-B40E7F6A6FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C60A512-B5ED-4F2F-AF80-B40E7F6A6FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B3DB018-C5AA-4D63-B9A6-F30846215059}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B3DB018-C5AA-4D63-B9A6-F30846215059}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B3DB018-C5AA-4D63-B9A6-F30846215059}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B3DB018-C5AA-4D63-B9A6-F30846215059}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {963992AC-5F8B-4DE2-854F-CA758E3F2284}
+	EndGlobalSection
+EndGlobal
