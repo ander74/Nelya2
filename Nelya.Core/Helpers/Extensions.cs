@@ -6,6 +6,7 @@
 // ===============================================
 #endregion
 using Nelya.Core.Collections;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.Text.RegularExpressions;
@@ -153,6 +154,11 @@ public static class Extensions {
     // ====================================================================================================
     #region Collections
     // ====================================================================================================
+
+    public static ObservableCollection<T> ToObservableCollection<T>(this IEnumerable<T> lista) {
+        return lista is null ? new ObservableCollection<T>() : new ObservableCollection<T>(lista);
+    }
+
 
     public static NotifyCollection<T> ToNotifyCollection<T>(this IEnumerable<T> lista) where T : INotifyPropertyChanged {
         return lista == null ? new NotifyCollection<T>() : new NotifyCollection<T>(lista);
