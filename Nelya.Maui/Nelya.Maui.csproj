@@ -24,10 +24,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Controls\Label\LabelDateValue.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\Label\LabelEntry.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Controls\Label\LabelSwitch.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Controls\Label\LabelTimeValue.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Controls\Label\LabelValue.xaml">

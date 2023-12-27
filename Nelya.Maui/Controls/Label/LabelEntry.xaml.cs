@@ -38,6 +38,14 @@ public partial class LabelEntry : ContentView {
         BindableProperty.CreateAttached("Text", typeof(string), typeof(LabelEntry), string.Empty);
 
 
+    public string Detail {
+        get { return (string)GetValue(DetailProperty); }
+        set { SetValue(DetailProperty, value); }
+    }
+    public static readonly BindableProperty DetailProperty =
+        BindableProperty.CreateAttached("Detail", typeof(string), typeof(LabelEntry), string.Empty);
+
+
     public string Value {
         get { return (string)GetValue(ValueProperty); }
         set { SetValue(ValueProperty, value); }
@@ -46,6 +54,28 @@ public partial class LabelEntry : ContentView {
         BindableProperty.CreateAttached("Value", typeof(string), typeof(LabelEntry), string.Empty, BindingMode.TwoWay);
 
 
+    public Color TextColor {
+        get { return (Color)GetValue(TextColorProperty); }
+        set { SetValue(TextColorProperty, value); }
+    }
+    public static readonly BindableProperty TextColorProperty =
+        BindableProperty.CreateAttached("TextColor", typeof(Color), typeof(LabelEntry), Colors.Black);
+
+
+    public Color DetailColor {
+        get { return (Color)GetValue(DetailColorProperty); }
+        set { SetValue(DetailColorProperty, value); }
+    }
+    public static readonly BindableProperty DetailColorProperty =
+        BindableProperty.CreateAttached("DetailColor", typeof(Color), typeof(LabelEntry), Colors.Black);
+
+
+    public Color ValueColor {
+        get { return (Color)GetValue(ValueColorProperty); }
+        set { SetValue(ValueColorProperty, value); }
+    }
+    public static readonly BindableProperty ValueColorProperty =
+        BindableProperty.CreateAttached("ValueColor", typeof(Color), typeof(LabelEntry), Colors.Black);
 
 
     public bool ShowSeparator {

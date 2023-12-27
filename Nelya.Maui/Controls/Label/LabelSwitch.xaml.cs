@@ -37,6 +37,30 @@ public partial class LabelSwitch : ContentView {
         BindableProperty.CreateAttached("Text", typeof(string), typeof(LabelSwitch), string.Empty);
 
 
+    public string Detail {
+        get { return (string)GetValue(DetailProperty); }
+        set { SetValue(DetailProperty, value); }
+    }
+    public static readonly BindableProperty DetailProperty =
+        BindableProperty.CreateAttached("Detail", typeof(string), typeof(LabelSwitch), string.Empty);
+
+
+    public Color TextColor {
+        get { return (Color)GetValue(TextColorProperty); }
+        set { SetValue(TextColorProperty, value); }
+    }
+    public static readonly BindableProperty TextColorProperty =
+        BindableProperty.CreateAttached("TextColor", typeof(Color), typeof(LabelSwitch), Colors.Black);
+
+
+    public Color DetailColor {
+        get { return (Color)GetValue(DetailColorProperty); }
+        set { SetValue(DetailColorProperty, value); }
+    }
+    public static readonly BindableProperty DetailColorProperty =
+        BindableProperty.CreateAttached("DetailColor", typeof(Color), typeof(LabelSwitch), Colors.Black);
+
+
     public bool IsToggled {
         get { return (bool)GetValue(IsToggledProperty); }
         set { SetValue(IsToggledProperty, value); }

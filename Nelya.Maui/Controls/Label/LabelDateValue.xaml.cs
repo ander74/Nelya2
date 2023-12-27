@@ -10,13 +10,13 @@ using System.Windows.Input;
 namespace Nelya.Maui.Controls.Label;
 
 
-public partial class LabelValue : ContentView {
+public partial class LabelDateValue : ContentView {
 
     // ====================================================================================================
     #region Campos privados y constructor
     // ====================================================================================================
 
-    public LabelValue() {
+    public LabelDateValue() {
         InitializeComponent();
     }
 
@@ -34,7 +34,7 @@ public partial class LabelValue : ContentView {
         set { SetValue(TextProperty, value); }
     }
     public static readonly BindableProperty TextProperty =
-        BindableProperty.CreateAttached("Text", typeof(string), typeof(LabelValue), string.Empty);
+        BindableProperty.CreateAttached("Text", typeof(string), typeof(LabelDateValue), string.Empty);
 
 
     public string Detail {
@@ -42,15 +42,15 @@ public partial class LabelValue : ContentView {
         set { SetValue(DetailProperty, value); }
     }
     public static readonly BindableProperty DetailProperty =
-        BindableProperty.CreateAttached("Detail", typeof(string), typeof(LabelValue), string.Empty);
+        BindableProperty.CreateAttached("Detail", typeof(string), typeof(LabelDateValue), string.Empty);
 
 
-    public string Value {
-        get { return (string)GetValue(ValueProperty); }
+    public DateTime Value {
+        get { return (DateTime)GetValue(ValueProperty); }
         set { SetValue(ValueProperty, value); }
     }
     public static readonly BindableProperty ValueProperty =
-        BindableProperty.CreateAttached("Value", typeof(string), typeof(LabelValue), string.Empty, BindingMode.TwoWay);
+        BindableProperty.CreateAttached("Value", typeof(DateTime), typeof(LabelDateValue), DateTime.Today, BindingMode.TwoWay);
 
 
     public Color TextColor {
@@ -58,7 +58,7 @@ public partial class LabelValue : ContentView {
         set { SetValue(TextColorProperty, value); }
     }
     public static readonly BindableProperty TextColorProperty =
-        BindableProperty.CreateAttached("TextColor", typeof(Color), typeof(LabelValue), Colors.Black);
+        BindableProperty.CreateAttached("TextColor", typeof(Color), typeof(LabelDateValue), Colors.Black);
 
 
     public Color DetailColor {
@@ -66,7 +66,7 @@ public partial class LabelValue : ContentView {
         set { SetValue(DetailColorProperty, value); }
     }
     public static readonly BindableProperty DetailColorProperty =
-        BindableProperty.CreateAttached("DetailColor", typeof(Color), typeof(LabelValue), Colors.Black);
+        BindableProperty.CreateAttached("DetailColor", typeof(Color), typeof(LabelDateValue), Colors.Black);
 
 
     public Color ValueColor {
@@ -74,7 +74,7 @@ public partial class LabelValue : ContentView {
         set { SetValue(ValueColorProperty, value); }
     }
     public static readonly BindableProperty ValueColorProperty =
-        BindableProperty.CreateAttached("ValueColor", typeof(Color), typeof(LabelValue), Colors.Black);
+        BindableProperty.CreateAttached("ValueColor", typeof(Color), typeof(LabelDateValue), Colors.Black);
 
 
     public bool ShowSeparator {
@@ -82,7 +82,7 @@ public partial class LabelValue : ContentView {
         set { SetValue(ShowSeparatorProperty, value); }
     }
     public static readonly BindableProperty ShowSeparatorProperty =
-        BindableProperty.CreateAttached("ShowSeparator", typeof(bool), typeof(LabelValue), true);
+        BindableProperty.CreateAttached("ShowSeparator", typeof(bool), typeof(LabelDateValue), true);
 
 
     public ICommand Command {
@@ -90,14 +90,14 @@ public partial class LabelValue : ContentView {
         set { SetValue(CommandProperty, value); }
     }
     public static readonly BindableProperty CommandProperty =
-        BindableProperty.CreateAttached("Command", typeof(ICommand), typeof(LabelValue), default(ICommand),
+        BindableProperty.CreateAttached("Command", typeof(ICommand), typeof(LabelDateValue), default(ICommand),
             propertyChanging: (bindable, oldvalue, newvalue) => {
-                var labelValue = (LabelValue)bindable;
+                var labelValue = (LabelDateValue)bindable;
                 var oldcommand = (ICommand)oldvalue;
                 if (oldcommand != null)
                     oldcommand.CanExecuteChanged -= labelValue.OnCommandCanExecuteChanged;
             }, propertyChanged: (bindable, oldvalue, newvalue) => {
-                var labelValue = (LabelValue)bindable;
+                var labelValue = (LabelDateValue)bindable;
                 var newcommand = (ICommand)newvalue;
                 if (newcommand != null) {
                     labelValue.IsEnabled = newcommand.CanExecute(labelValue.CommandParameter);
@@ -111,9 +111,9 @@ public partial class LabelValue : ContentView {
         set { SetValue(CommandParameterProperty, value); }
     }
     public static readonly BindableProperty CommandParameterProperty =
-        BindableProperty.CreateAttached("CommandParameter", typeof(object), typeof(LabelValue), default(object),
+        BindableProperty.CreateAttached("CommandParameter", typeof(object), typeof(LabelDateValue), default(object),
             propertyChanged: (bindable, oldvalue, newvalue) => {
-                var labelValue = (LabelValue)bindable;
+                var labelValue = (LabelDateValue)bindable;
                 if (labelValue.Command != null) {
                     labelValue.IsEnabled = labelValue.Command.CanExecute(newvalue);
                 }
@@ -138,7 +138,6 @@ public partial class LabelValue : ContentView {
 
     #endregion
     // ====================================================================================================
-
 
 
 }

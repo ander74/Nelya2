@@ -10,22 +10,45 @@
 
     <Grid
         BindingContext="{x:Reference labelEntry}"
-        ColumnDefinitions="4*,*">
+        ColumnDefinitions="4*,*"
+        RowDefinitions="*,Auto">
 
         <Label
-            Padding="0,10"
-            FontSize="Small"
+            Padding="10,10,0,10"
+            FontAttributes="Bold"
+            FontSize="Header"
             Text="{Binding Text}"
-            TextColor="{StaticResource Gray900}"
+            TextColor="{Binding TextColor}"
             VerticalOptions="Center" />
+        <Label
+            Grid.Row="1"
+            Padding="10,0,0,10"
+            FontSize="Micro"
+            Text="{Binding Detail}"
+            TextColor="{Binding DetailColor}"
+            VerticalOptions="Center">
+            <Label.Triggers>
+                <DataTrigger
+                    Binding="{Binding Detail}"
+                    TargetType="Label"
+                    Value="">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
         <Entry
+            Grid.RowSpan="2"
             Grid.Column="1"
+            Margin="10"
             FontSize="Small"
             HorizontalOptions="FillAndExpand"
             HorizontalTextAlignment="End"
+            MinimumWidthRequest="80"
             Text="{Binding Value}"
+            TextColor="{Binding ValueColor}"
             VerticalOptions="Center" />
         <BoxView
+            Grid.Row="1"
             Grid.ColumnSpan="2"
             BackgroundColor="LightGray"
             HeightRequest="1"
